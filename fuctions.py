@@ -24,6 +24,8 @@ def convertToPolar(complexNumber):
     imaginaryPart = complexNumber.imag
     module = sqrt(realPart ** 2 + imaginaryPart ** 2)
     angle = (atan((imaginaryPart / realPart)) * 57.2958)
+    if angle < 0:
+        angle = 180 + angle
     return module, angle
 
 
